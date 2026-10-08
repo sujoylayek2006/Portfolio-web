@@ -105,6 +105,11 @@
 - **2026-10-08 (Session 2): Next.js Development Indicator Badge Removal**
   - Disabled the floating Next.js "N" development indicator via `devIndicators: false` in [next.config.ts](file:///d:/Project%20Ideas/Portfolio%20web/next.config.ts) per user request.
   - Restarted background development server and verified green production build.
+- **2026-10-08 (Session 2): Certificate Initial State Collapsed (Off) & PDF Showcase Removal**
+  - Configured all certificate cards to start in the collapsed/off state by default (`selectedOrgId: null`).
+  - Added click-to-toggle functionality: clicking an organization box expands its certificates; clicking it again collapses it. Added explicit "Hide / Close" button.
+  - Completely removed "View PDF" buttons, external links, and PDF text/badges per user instruction.
+  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1691ms).
 
 ---
 
