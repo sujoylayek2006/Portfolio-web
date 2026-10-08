@@ -88,6 +88,12 @@
   - Cleaned up unused default template SVGs from `public/`.
   - Added comprehensive [docs/architecture.md](file:///d:/Project%20Ideas/Portfolio%20web/docs/architecture.md).
   - Verified green lint and build (`npm run lint` exit code 0; `npm run build` exit code 0 in 2.6s).
+- **2026-10-08 (Session 2): Real Verified Certificates Integration (21 Credentials)**
+  - Processed and integrated 21 verified certificates from user's `Sc Pic` directory into [public/certificates/](file:///d:/Project%20Ideas/Portfolio%20web/public/certificates/).
+  - Optimized HackerRank PDFs from raw 7.6MB uncompressed bitmaps to crisp 120KB PDF documents, saving >60MB while preserving 100% resolution.
+  - Implemented category filter tabs in [Certifications.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Certifications.tsx): *All Credentials (21)*, *Cloud & GenAI (4)*, *HackerRank (8)*, *IBM SkillsBuild (6)*, and *Cybersecurity (3)*.
+  - Added direct 1-click "View PDF" credential buttons opening verified PDFs in a new tab.
+  - Verified green build (`npm run build` exit code 0 in 1258ms) and verified HTTP 200 PDF delivery on local server.
 
 ---
 
