@@ -152,6 +152,8 @@
   - Repositioned **About & Background** immediately after the Hero section in [page.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/page.tsx).
   - Updated Hero scroll cue to link to `#about` and synchronized navigation links in [navigation.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/navigation.ts) and [Navbar.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/ui/Navbar.tsx).
   - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 995ms).
+- **2026-10-08 (Session 2): Comprehensive README.md Overhaul & GitHub Repo Metadata**
+  - Updated [README.md](file:///d:/Project%20Ideas/Portfolio%20web/README.md) with live production links (`sujoylayek.vercel.app`), full architecture map, skill metrics, new section order, and feature badges.
 
 ---
 
