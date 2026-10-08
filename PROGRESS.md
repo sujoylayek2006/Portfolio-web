@@ -110,6 +110,9 @@
   - Added click-to-toggle functionality: clicking an organization box expands its certificates; clicking it again collapses it. Added explicit "Hide / Close" button.
   - Completely removed "View PDF" buttons, external links, and PDF text/badges per user instruction.
   - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1691ms).
+- **2026-10-08 (Session 2): Project Showcase Header Simplification**
+  - Simplified the project showcase eyebrow banner from `Selected Works ({activeProject.index} • 03)` to clean `Selected Works` in [ProjectShowcase.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/ProjectShowcase.tsx) per user request.
+  - Verified green lint and production build (`npm run lint` exit code 0; `npm run build` exit code 0 in 1176ms).
 
 ---
 

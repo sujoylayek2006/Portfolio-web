@@ -76,7 +76,7 @@ export default function ProjectShowcase() {
         <div>
           <span className="text-xs font-mono uppercase tracking-[0.25em] text-amber-400 flex items-center gap-2">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            Selected Works ({activeProject.index} &bull; 03)
+            Selected Works
           </span>
           <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mt-2">
             Featured Projects.
