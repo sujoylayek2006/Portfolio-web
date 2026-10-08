@@ -144,13 +144,18 @@
     - Frontend, Backend, Programming: **80%**
   - Designed glowing, animated proficiency progress bars and header percentage badges in [Skills.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Skills.tsx) and [skills.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/skills.ts).
   - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1056ms).
+- **2026-10-08 (Session 2): Live Production Deployment on Vercel Confirmed**
+  - Live Production URL: **`https://portfolio-web-sujoylayek.vercel.app`** (Verified HTTP 200).
+  - OpenGraph Dynamic Social Card: **`https://portfolio-web-sujoylayek.vercel.app/opengraph-image`** (Verified HTTP 200).
+  - Updated [layout.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/layout.tsx) `metadataBase` and [sitemap.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/app/sitemap.ts) canonical URLs to match the live domain.
+  - Phase 5 Production Deployment successfully completed.
 
 ---
 
 ## 3. Next
 
-- **Task:** 1-Click Vercel Deployment
-  - **Outcome:** Import GitHub repo `sujoylayek2006/Portfolio-web` into Vercel dashboard to get live production URL (`https://*.vercel.app`).
+- **Task:** Share Portfolio on LinkedIn & Resume
+  - **Outcome:** Link `https://portfolio-web-sujoylayek.vercel.app` across Sujoy's LinkedIn profile, GitHub bio, and technical job applications.
 
 
 ---
