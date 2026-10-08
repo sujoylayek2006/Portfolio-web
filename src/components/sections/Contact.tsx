@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Copy, Check, Send, ArrowUpRight, FileText, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
+import { socialLinks } from "@/data/navigation";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -16,7 +17,7 @@ export default function Contact() {
     honeypot: "",
   });
 
-  const emailAddress = "sujoylayek.rampur.2006@gmail.com";
+  const emailAddress = socialLinks.email;
 
   const handleCopyEmail = async () => {
     try {
@@ -24,7 +25,6 @@ export default function Contact() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
@@ -42,7 +42,6 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Free serverless form forwarding via Web3Forms API
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -50,7 +49,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "0e7c5d9c-placeholder-sujoy", // Replaceable with personal Web3Forms token
+          access_key: "0e7c5d9c-placeholder-sujoy",
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -62,7 +61,6 @@ export default function Contact() {
       if (response.ok) {
         setSubmitted(true);
       } else {
-        // Even if API key is in setup placeholder mode, trigger graceful success fallback
         setSubmitted(true);
       }
     } catch {
@@ -148,7 +146,7 @@ export default function Contact() {
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://www.linkedin.com/in/sujoylayek2006"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-neutral-900/80 hover:bg-neutral-800 border border-white/10 hover:border-purple-500/40 text-xs font-medium text-neutral-300 hover:text-white transition-all group"
@@ -159,7 +157,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://github.com/sujoylayek2006"
+                href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-neutral-900/80 hover:bg-neutral-800 border border-white/10 hover:border-purple-500/40 text-xs font-medium text-neutral-300 hover:text-white transition-all group"
@@ -210,7 +208,7 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Spam Honeypot Field (Hidden) */}
+              {/* Spam Honeypot Field */}
               <input
                 type="text"
                 name="honeypot"

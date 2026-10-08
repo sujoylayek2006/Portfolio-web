@@ -53,7 +53,7 @@ export default function AmbientBackground() {
         className="absolute top-[45%] left-[20%] w-[60vw] h-[40vw] max-w-[800px] max-h-[500px] rounded-full bg-gradient-to-tr from-blue-700/10 via-indigo-600/8 to-transparent blur-[160px]"
       />
 
-      {/* Grain / Noise Texture Overlay (Optional subtle aesthetic) */}
+      {/* Grain / Noise Texture Overlay */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
     </div>
   );

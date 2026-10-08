@@ -3,71 +3,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Layers, Terminal, Server, Wrench, CheckCircle } from "lucide-react";
+import { skillCategories } from "@/data/skills";
+
+const iconMap = {
+  Layers,
+  Terminal,
+  Server,
+  Wrench,
+};
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      name: "Frontend & UI Engineering",
-      icon: Layers,
-      color: "text-purple-400",
-      accent: "from-purple-500/10 to-transparent",
-      skills: [
-        "React 18",
-        "Next.js (App Router)",
-        "TypeScript",
-        "JavaScript (ES6+)",
-        "Tailwind CSS",
-        "Framer Motion",
-        "HTML5 / CSS3",
-        "Responsive Design",
-      ],
-    },
-    {
-      name: "Programming Languages & Algorithms",
-      icon: Terminal,
-      color: "text-blue-400",
-      accent: "from-blue-500/10 to-transparent",
-      skills: [
-        "Python (Automation, Scripting)",
-        "C Programming",
-        "TypeScript",
-        "JavaScript",
-        "Data Structures",
-        "Algorithms & Problem Solving",
-        "Object-Oriented Design",
-      ],
-    },
-    {
-      name: "Backend & Systems",
-      icon: Server,
-      color: "text-emerald-400",
-      accent: "from-emerald-500/10 to-transparent",
-      skills: [
-        "Node.js",
-        "Express.js",
-        "RESTful API Design",
-        "Serverless Functions",
-        "Authentication Flows",
-        "JSON Data Modeling",
-      ],
-    },
-    {
-      name: "Tools, DevOps & Environment",
-      icon: Wrench,
-      color: "text-pink-400",
-      accent: "from-pink-500/10 to-transparent",
-      skills: [
-        "Git & GitHub",
-        "Linux CLI / Bash",
-        "Vercel Deployment",
-        "Vite Dev Server",
-        "ESLint & PostCSS",
-        "Postman API Testing",
-        "VS Code",
-      ],
-    },
-  ];
-
   return (
     <section
       id="skills"
@@ -91,10 +36,10 @@ export default function Skills() {
       {/* Categories Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {skillCategories.map((category, idx) => {
-          const Icon = category.icon;
+          const Icon = iconMap[category.iconName];
           return (
             <motion.div
-              key={category.name}
+              key={category.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}

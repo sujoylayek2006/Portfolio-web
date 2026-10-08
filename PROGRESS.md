@@ -80,8 +80,14 @@
   - Initialized git repository (`git init`). User provided repo: `https://github.com/sujoylayek2006/Portfolio-web.git`.
   - Staged clean source files, created initial commit (`9af123c`), rebased seamlessly onto remote initial commit (`7e56e4c`), and pushed cleanly to `origin/main` (`940683d`).
   - Removed `docs/learning-notes/` from git tracking and added to [.gitignore](file:///d:/Project%20Ideas/Portfolio%20web/.gitignore) per user request (commit `46d0b28`). Local files preserved.
-  - Verified production build and lint green (`npm run build` exit code 0; `npm run lint` exit code 0).
-  - Branch `main` is up-to-date with `origin/main`.
+  - Enhanced [README.md](file:///d:/Project%20Ideas/Portfolio%20web/README.md) with comprehensive badges, architecture overview, and deployment guidance (commit `823db33`).
+- **2026-10-08 (Session 2): Enterprise Folder Structure Restructure**
+  - Modularized `src/components/` into `sections/` (`Hero.tsx`, `MarqueeBanner.tsx`, `ProjectShowcase.tsx`, `About.tsx`, `Skills.tsx`, `Certifications.tsx`, `Contact.tsx`), `ui/` (`Navbar.tsx`, `AmbientBackground.tsx`, `LaptopMockup.tsx`, `Icons.tsx`), and `archive/`.
+  - Decoupled portfolio data into dedicated `src/data/` modules (`projects.ts`, `skills.ts`, `certifications.ts`, `navigation.ts`).
+  - Added centralized TypeScript types in `src/types/index.ts` and Tailwind class merger `cn` in `src/lib/utils.ts`.
+  - Cleaned up unused default template SVGs from `public/`.
+  - Added comprehensive [docs/architecture.md](file:///d:/Project%20Ideas/Portfolio%20web/docs/architecture.md).
+  - Verified green lint and build (`npm run lint` exit code 0; `npm run build` exit code 0 in 2.6s).
 
 ---
 

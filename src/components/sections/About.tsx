@@ -53,7 +53,7 @@ export default function About() {
         </p>
       </div>
 
-      {/* Grid: Bio Left, Portrait Right (Lewis Zhang Editorial Style) */}
+      {/* Grid: Bio Left, Portrait Right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column: Narrative & Philosophy */}
         <motion.div

@@ -3,7 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
+import { socialLinks } from "@/data/navigation";
 
 export default function Hero() {
   return (
@@ -79,7 +80,7 @@ export default function Hero() {
           {/* Social Links */}
           <div className="flex items-center space-x-2 sm:ml-4 pt-2 sm:pt-0">
             <a
-              href="https://github.com/sujoylayek2006"
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-white/10 text-neutral-400 hover:text-white hover:bg-white/5 transition-colors"
@@ -88,7 +89,7 @@ export default function Hero() {
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
-              href="https://www.linkedin.com/in/sujoylayek2006"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-white/10 text-neutral-400 hover:text-white hover:bg-white/5 transition-colors"
@@ -97,7 +98,7 @@ export default function Hero() {
               <LinkedinIcon className="w-4 h-4" />
             </a>
             <a
-              href="mailto:sujoylayek.rampur.2006@gmail.com"
+              href={`mailto:${socialLinks.email}`}
               className="p-3 rounded-full border border-white/10 text-neutral-400 hover:text-white hover:bg-white/5 transition-colors"
               aria-label="Email Sujoy Layek"
             >

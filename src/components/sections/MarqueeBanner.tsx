@@ -6,7 +6,7 @@ import { Sparkles } from "lucide-react";
 
 interface MarqueeBannerProps {
   className?: string;
-  speed?: number; // duration in seconds for one full loop
+  speed?: number;
 }
 
 const marqueeItems = [
@@ -44,7 +44,7 @@ export default function MarqueeBanner({
             repeat: Infinity,
           }}
         >
-          {/* We render items twice in sequence to achieve an uninterrupted seamless 50% loop */}
+          {/* Render items twice in sequence to achieve an uninterrupted seamless 50% loop */}
           {[...marqueeItems, ...marqueeItems].map((item, index) => (
             <div
               key={`${item}-${index}`}

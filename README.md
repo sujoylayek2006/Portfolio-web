@@ -58,34 +58,49 @@ Designed with an **editorial dark luxury aesthetic**, featuring smooth micro-int
 ## 📂 Project Structure
 
 ```text
+├── docs/
+│   ├── PRD.md               # Product Requirements Document
+│   └── architecture.md      # System design & architecture specification
 ├── public/
-│   ├── fonts/               # Custom editorial typography
+│   ├── fonts/               # Custom typography (George luxury font)
 │   ├── images/
 │   │   ├── projects/        # Real application screenshots
 │   │   └── sujoy-profile.jpg# Professional portrait
 │   └── models/              # 3D assets & particle buffers
 ├── src/
-│   ├── app/
+│   ├── app/                 # Next.js App Router (layout, routes & metadata)
 │   │   ├── favicon.ico
 │   │   ├── globals.css      # Design tokens, @font-face & ambient utilities
-│   │   ├── layout.tsx       # Root layout, meta tags & font definitions
+│   │   ├── layout.tsx       # Root layout & meta tags
 │   │   ├── page.tsx         # Portfolio single-page layout
 │   │   ├── robots.ts        # Search crawler configuration
 │   │   └── sitemap.ts       # XML sitemap generator
-│   └── components/
-│       ├── About.tsx        # Bio, education & engineering journey
-│       ├── AmbientBackground.tsx # Ambient mesh lighting
-│       ├── Certifications.tsx   # Verified credential badges
-│       ├── Contact.tsx      # Contact form, direct mail & footer
-│       ├── Hero.tsx         # Headline, status pill & quick links
-│       ├── Icons.tsx        # SVG brand iconography
-│       ├── LaptopMockup.tsx # Realistic MacBook frame component
-│       ├── MarqueeBanner.tsx# Infinite horizontal ticker
-│       ├── Navbar.tsx       # Responsive editorial header & drawer
-│       ├── ProjectShowcase.tsx # 3D perspective slider stage
-│       └── Skills.tsx       # Tech stack categorization
-└── docs/
-    └── PRD.md               # Product Requirements Document
+│   ├── components/
+│   │   ├── sections/        # Page sections
+│   │   │   ├── About.tsx
+│   │   │   ├── Certifications.tsx
+│   │   │   ├── Contact.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── MarqueeBanner.tsx
+│   │   │   ├── ProjectShowcase.tsx
+│   │   │   └── Skills.tsx
+│   │   ├── ui/              # Reusable UI primitives
+│   │   │   ├── AmbientBackground.tsx
+│   │   │   ├── Icons.tsx
+│   │   │   ├── LaptopMockup.tsx
+│   │   │   └── Navbar.tsx
+│   │   └── archive/         # Experimental / alternative components
+│   │       ├── CustomCursor.tsx
+│   │       └── ParticleGalaxy.tsx
+│   ├── data/                # Decoupled portfolio content data
+│   │   ├── certifications.ts# Certification records & credentials
+│   │   ├── navigation.ts    # Navigation links & social profiles
+│   │   ├── projects.ts      # Featured projects data & highlights
+│   │   └── skills.ts        # Skill categories & tech stack items
+│   ├── lib/                 # Utility helpers
+│   │   └── utils.ts         # Tailwind class merging helper (cn)
+│   └── types/               # TypeScript interfaces
+│       └── index.ts         # Shared portfolio type definitions
 ```
 
 ---

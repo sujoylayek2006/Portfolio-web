@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, FileText, ArrowUpRight } from "lucide-react";
+import { navLinks, socialLinks } from "@/data/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      // Simple active section detection
+      // Section spy detection
       const sections = ["projects", "about", "skills", "certifications", "contact"];
       const scrollPos = window.scrollY + 200;
 
@@ -37,15 +38,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "Work", href: "#projects" },
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Credentials", href: "#certifications" },
-    { label: "Contact", href: "#contact" },
-  ];
-
   return (
     <>
       <header
@@ -56,7 +48,7 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          {/* Logo / Name (Lewis Zhang Editorial Style) */}
+          {/* Logo / Name */}
           <a
             href="#"
             className="group flex items-center space-x-1.5 focus:outline-none"
@@ -84,7 +76,7 @@ export default function Navbar() {
               <span>Resume</span>
             </a>
 
-            {/* Menu Trigger (Minimalist text matching media_1791447778842_1a7c5559.webp) */}
+            {/* Menu Trigger */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type="button"
@@ -98,7 +90,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full-Screen / Drawer Menu Modal (Editorial Style) */}
+      {/* Full-Screen Drawer Menu Modal */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -157,15 +149,15 @@ export default function Navbar() {
                   Direct Contact
                 </p>
                 <a
-                  href="mailto:sujoylayek.rampur.2006@gmail.com"
+                  href={`mailto:${socialLinks.email}`}
                   className="hover:text-purple-300 transition-colors font-mono"
                 >
-                  sujoylayek.rampur.2006@gmail.com
+                  {socialLinks.email}
                 </a>
               </div>
               <div className="flex items-center space-x-6">
                 <a
-                  href="https://github.com/sujoylayek2006"
+                  href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -173,7 +165,7 @@ export default function Navbar() {
                   GitHub
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/sujoylayek2006"
+                  href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"

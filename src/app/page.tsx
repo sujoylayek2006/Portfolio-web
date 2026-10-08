@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import AmbientBackground from "@/components/AmbientBackground";
-import Hero from "@/components/Hero";
-import MarqueeBanner from "@/components/MarqueeBanner";
-import ProjectShowcase from "@/components/ProjectShowcase";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Certifications from "@/components/Certifications";
-import Contact from "@/components/Contact";
+import Navbar from "@/components/ui/Navbar";
+import AmbientBackground from "@/components/ui/AmbientBackground";
+import Hero from "@/components/sections/Hero";
+import MarqueeBanner from "@/components/sections/MarqueeBanner";
+import ProjectShowcase from "@/components/sections/ProjectShowcase";
+import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -20,25 +20,25 @@ export default function Home() {
 
       {/* Main Content Area */}
       <main className="relative z-10 flex flex-col">
-        {/* Phase 1: Hero Section */}
+        {/* Hero Section */}
         <Hero />
 
-        {/* Phase 6: Infinite Vision & Skills Marquee Ticker */}
+        {/* Infinite Vision & Skills Marquee Ticker */}
         <MarqueeBanner />
 
-        {/* Phase 2: Featured Project Showcase with Laptop Mockups */}
+        {/* Featured Project Showcase with 3D Laptop Stage */}
         <ProjectShowcase />
 
-        {/* Phase 3: About Me Section with Portrait */}
+        {/* About Me Section with Portrait */}
         <About />
 
-        {/* Phase 3: Technical Skills Matrix */}
+        {/* Technical Skills Matrix */}
         <Skills />
 
-        {/* Phase 3: Certifications & Accreditations */}
+        {/* Certifications & Accreditations */}
         <Certifications />
 
-        {/* Phase 4: Serverless Contact Form & Editorial Footer */}
+        {/* Serverless Contact Form & Editorial Footer */}
         <Contact />
       </main>
     </div>
