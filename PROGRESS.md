@@ -135,7 +135,15 @@
   - **2. Menu Numbers:** Cleaned [Navbar.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/ui/Navbar.tsx) fullscreen drawer links to remove all numbering (`01`, `02`...) for a consistent, minimal editorial aesthetic.
   - **3. Resume Integration:** Added configurable `socialLinks.resume` with automatic `/resume.pdf` support in [navigation.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/navigation.ts) and direct target blank linking in [Contact.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Contact.tsx).
   - **4. OpenGraph Social Card:** Created dynamic [opengraph-image.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/opengraph-image.tsx) generating 1200x630 rich social media preview cards on WhatsApp, LinkedIn, and Twitter/X with `metadataBase` configured.
-  - **5. Production Build:** Verified green build generating all 7 routes (`/`, `/_not-found`, `/opengraph-image`, `/robots.txt`, `/sitemap.xml`) with exit code 0.
+  - **5. Production Build & Push:** Verified green build generating all 7 routes with exit code 0 and pushed `main` branch to GitHub.
+- **2026-10-08 (Session 2): Skill Percentages & Animated Proficiency Bars**
+  - Integrated custom skill percentages across categories per user specification:
+    - Artificial Intelligence & GenAI: **60%**
+    - Cybersecurity & Defense: **60%**
+    - DevOps, Tools & Environment: **70%**
+    - Frontend, Backend, Programming: **80%**
+  - Designed glowing, animated proficiency progress bars and header percentage badges in [Skills.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Skills.tsx) and [skills.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/skills.ts).
+  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1056ms).
 
 ---
 

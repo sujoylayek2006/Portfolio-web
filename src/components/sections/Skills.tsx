@@ -61,27 +61,53 @@ export default function Skills() {
                 className={`absolute inset-0 bg-gradient-to-br ${category.accent} opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none`}
               />
 
-              <div className="relative z-10">
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="p-2.5 rounded-xl bg-neutral-800/80 border border-white/10">
-                    <Icon className={`w-5 h-5 ${category.color}`} />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
-                    {category.name}
-                  </h3>
-                </div>
+              <div className="relative z-10 flex flex-col justify-between h-full">
+                <div>
+                  {/* Category Header with Percentage Badge */}
+                  <div className="flex items-start justify-between gap-3 mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2.5 rounded-xl bg-neutral-800/80 border border-white/10 shrink-0">
+                        <Icon className={`w-5 h-5 ${category.color}`} />
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                        {category.name}
+                      </h3>
+                    </div>
 
-                {/* Skill Pills */}
-                <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                  {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-neutral-800/60 hover:bg-neutral-800 border border-white/5 hover:border-purple-500/30 text-neutral-300 hover:text-white transition-all select-none"
-                    >
-                      <CheckCircle className="w-3 h-3 text-purple-400 opacity-60" />
-                      <span>{skill}</span>
+                    <span className="font-mono text-xs font-semibold px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-200 shrink-0">
+                      {category.percentage}%
                     </span>
-                  ))}
+                  </div>
+
+                  {/* Animated Proficiency Bar */}
+                  <div className="mb-6">
+                    <div className="h-1.5 w-full bg-neutral-800/80 rounded-full overflow-hidden border border-white/5">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${category.percentage}%` }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.9,
+                          delay: 0.2 + idx * 0.08,
+                          ease: "easeOut",
+                        }}
+                        className={`h-full rounded-full bg-gradient-to-r ${category.barGradient}`}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Skill Pills */}
+                  <div className="flex flex-wrap gap-2 sm:gap-2.5">
+                    {category.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-neutral-800/60 hover:bg-neutral-800 border border-white/5 hover:border-purple-500/30 text-neutral-300 hover:text-white transition-all select-none"
+                      >
+                        <CheckCircle className="w-3 h-3 text-purple-400 opacity-60" />
+                        <span>{skill}</span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

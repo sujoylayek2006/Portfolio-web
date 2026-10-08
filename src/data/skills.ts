@@ -4,6 +4,8 @@ export interface SkillCategoryData {
   iconName: "Layers" | "Terminal" | "Server" | "Cpu" | "ShieldCheck" | "Wrench";
   color: string;
   accent: string;
+  percentage: number;
+  barGradient: string;
   skills: string[];
 }
 
@@ -14,6 +16,8 @@ export const skillCategories: SkillCategoryData[] = [
     iconName: "Layers",
     color: "text-purple-400",
     accent: "from-purple-500/10 to-transparent",
+    percentage: 80,
+    barGradient: "from-purple-500 to-fuchsia-400",
     skills: [
       "React 18",
       "Next.js (App Router)",
@@ -31,6 +35,8 @@ export const skillCategories: SkillCategoryData[] = [
     iconName: "Server",
     color: "text-emerald-400",
     accent: "from-emerald-500/10 to-transparent",
+    percentage: 80,
+    barGradient: "from-emerald-500 to-teal-400",
     skills: [
       "Node.js & Express",
       "RESTful API Design",
@@ -47,6 +53,8 @@ export const skillCategories: SkillCategoryData[] = [
     iconName: "Terminal",
     color: "text-blue-400",
     accent: "from-blue-500/10 to-transparent",
+    percentage: 80,
+    barGradient: "from-blue-500 to-cyan-400",
     skills: [
       "Python (Automation & Scripting)",
       "C Programming",
@@ -62,6 +70,8 @@ export const skillCategories: SkillCategoryData[] = [
     iconName: "Cpu",
     color: "text-amber-400",
     accent: "from-amber-500/10 to-transparent",
+    percentage: 60,
+    barGradient: "from-amber-500 to-orange-400",
     skills: [
       "Generative AI & LLMs",
       "Autonomous AI Agent Architectures",
@@ -77,6 +87,8 @@ export const skillCategories: SkillCategoryData[] = [
     iconName: "ShieldCheck",
     color: "text-cyan-400",
     accent: "from-cyan-500/10 to-transparent",
+    percentage: 60,
+    barGradient: "from-cyan-500 to-blue-400",
     skills: [
       "Network Defense & Architecture",
       "Vulnerability Assessment",
@@ -92,6 +104,8 @@ export const skillCategories: SkillCategoryData[] = [
     iconName: "Wrench",
     color: "text-pink-400",
     accent: "from-pink-500/10 to-transparent",
+    percentage: 70,
+    barGradient: "from-pink-500 to-rose-400",
     skills: [
       "Git & GitHub Version Control",
       "Linux CLI & Bash",
