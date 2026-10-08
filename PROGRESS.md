@@ -79,6 +79,7 @@
   - Updated [.gitignore](file:///d:/Project%20Ideas/Portfolio%20web/.gitignore) to exclude reference media (`/Sc Pic/`, `/Sc video/`) and internal agent orchestration files (`PROJECT_INTERVIEW*`, `MASTER_RULES*`, `CLAUDE*`, `AGENTS*`, `.claude/`) keeping repository public view clean and professional.
   - Initialized git repository (`git init`). User provided repo: `https://github.com/sujoylayek2006/Portfolio-web.git`.
   - Staged clean source files, created initial commit (`9af123c`), rebased seamlessly onto remote initial commit (`7e56e4c`), and pushed cleanly to `origin/main` (`940683d`).
+  - Removed `docs/learning-notes/` from git tracking and added to [.gitignore](file:///d:/Project%20Ideas/Portfolio%20web/.gitignore) per user request (commit `46d0b28`). Local files preserved.
   - Verified production build and lint green (`npm run build` exit code 0; `npm run lint` exit code 0).
   - Branch `main` is up-to-date with `origin/main`.
 
