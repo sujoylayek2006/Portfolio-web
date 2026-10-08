@@ -16,7 +16,7 @@ const playfairSerif = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-web-sujoylayek.vercel.app"),
+  metadataBase: new URL("https://sujoylayek.vercel.app"),
   title: "Sujoy Layek — Full-Stack Developer & Student",
   description:
     "Personal portfolio of Sujoy Layek, a Full-Stack Web Developer and B.Tech CSE student at NSHM Knowledge Campus Durgapur. Showcasing hackathon projects, developer tools, and verified engineering certifications.",

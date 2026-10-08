@@ -145,8 +145,9 @@
   - Designed glowing, animated proficiency progress bars and header percentage badges in [Skills.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Skills.tsx) and [skills.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/skills.ts).
   - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1056ms).
 - **2026-10-08 (Session 2): Live Production Deployment on Vercel Confirmed**
-  - Live Production URL: **`https://portfolio-web-sujoylayek.vercel.app`** (Verified HTTP 200).
-  - OpenGraph Dynamic Social Card: **`https://portfolio-web-sujoylayek.vercel.app/opengraph-image`** (Verified HTTP 200).
+  - Live Production URL: **`https://sujoylayek.vercel.app`** (Verified HTTP 200).
+  - OpenGraph Dynamic Social Card: **`https://sujoylayek.vercel.app/opengraph-image`** (Verified HTTP 200).
+  - Updated [layout.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/layout.tsx) `metadataBase` and [sitemap.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/app/sitemap.ts) canonical URLs to match the live domain.
 - **2026-10-08 (Session 2): Section Flow Reordered (Hero -> About & Background -> Projects)**
   - Repositioned **About & Background** immediately after the Hero section in [page.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/page.tsx).
   - Updated Hero scroll cue to link to `#about` and synchronized navigation links in [navigation.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/navigation.ts) and [Navbar.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/ui/Navbar.tsx).
@@ -157,7 +158,7 @@
 ## 3. Next
 
 - **Task:** Share Portfolio on LinkedIn & Resume
-  - **Outcome:** Link `https://portfolio-web-sujoylayek.vercel.app` across Sujoy's LinkedIn profile, GitHub bio, and technical job applications.
+  - **Outcome:** Link `https://sujoylayek.vercel.app` across Sujoy's LinkedIn profile, GitHub bio, and technical job applications.
 
 
 ---
