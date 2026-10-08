@@ -113,16 +113,18 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="pt-8 border-t border-white/5 flex items-center justify-between text-xs text-neutral-500 font-mono"
+        className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-neutral-500 font-mono"
       >
         <div className="flex items-center space-x-2">
-          <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-          <span>Featured: NGO Digital Connect &bull; RenameX &bull; MultiFileMaker</span>
+          <Sparkles className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+          <span className="text-neutral-400">
+            Interests: Full-Stack Web Development &bull; Cybersecurity &bull; Ethical Hacking &bull; AI
+          </span>
         </div>
 
         <a
           href="#projects"
-          className="group flex items-center space-x-2 text-neutral-400 hover:text-white transition-colors"
+          className="group flex items-center space-x-2 text-neutral-400 hover:text-white transition-colors shrink-0"
         >
           <span>Scroll down</span>
           <ArrowDown className="w-3.5 h-3.5 animate-bounce group-hover:text-purple-400" />
