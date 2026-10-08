@@ -147,8 +147,9 @@
 - **2026-10-08 (Session 2): Live Production Deployment on Vercel Confirmed**
   - Live Production URL: **`https://portfolio-web-sujoylayek.vercel.app`** (Verified HTTP 200).
   - OpenGraph Dynamic Social Card: **`https://portfolio-web-sujoylayek.vercel.app/opengraph-image`** (Verified HTTP 200).
-  - Updated [layout.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/layout.tsx) `metadataBase` and [sitemap.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/app/sitemap.ts) canonical URLs to match the live domain.
-  - Phase 5 Production Deployment successfully completed.
+- **2026-10-08 (Session 2): Custom 'SL' Favicon & Dynamic App Icon**
+  - Replaced the default Next.js "N" icon with a custom branded **"SL"** (Sujoy Layek) icon across both [favicon.ico](file:///d:/Project%20Ideas/Portfolio%20web/src/app/favicon.ico) (multi-res 16/32/48/64px) and [icon.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/icon.tsx) (Next.js dynamic SVG/PNG).
+  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0). Verified HTTP 200 on `/icon` and `/favicon.ico`.
 
 ---
 
