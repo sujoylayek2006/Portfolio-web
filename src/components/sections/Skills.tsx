@@ -2,7 +2,15 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Layers, Terminal, Server, Wrench, CheckCircle } from "lucide-react";
+import {
+  Layers,
+  Terminal,
+  Server,
+  Wrench,
+  CheckCircle,
+  Cpu,
+  ShieldCheck,
+} from "lucide-react";
 import { skillCategories } from "@/data/skills";
 
 const iconMap = {
@@ -10,6 +18,8 @@ const iconMap = {
   Terminal,
   Server,
   Wrench,
+  Cpu,
+  ShieldCheck,
 };
 
 export default function Skills() {
@@ -34,7 +44,7 @@ export default function Skills() {
       </div>
 
       {/* Categories Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, idx) => {
           const Icon = iconMap[category.iconName];
           return (

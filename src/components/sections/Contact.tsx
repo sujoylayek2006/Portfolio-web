@@ -253,11 +253,13 @@ export default function Contact() {
               </a>
 
               <a
-                href={`mailto:${emailAddress}?subject=Resume%20Request%20-%20Sujoy%20Layek`}
+                href={socialLinks.resume || `mailto:${emailAddress}?subject=Resume%20Request%20-%20Sujoy%20Layek`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-neutral-900/80 hover:bg-neutral-800 border border-white/10 hover:border-purple-500/40 text-xs font-medium text-neutral-300 hover:text-white transition-all group"
               >
                 <FileText className="w-4 h-4 text-purple-400" />
-                <span>Request Resume / CV</span>
+                <span>Resume / CV</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />
               </a>
             </div>

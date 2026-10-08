@@ -127,11 +127,8 @@ export default function Navbar() {
                     <a
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="group flex items-baseline space-x-4 text-3xl md:text-6xl font-serif font-bold text-neutral-300 hover:text-white transition-colors"
+                      className="group flex items-baseline space-x-3 text-3xl md:text-6xl font-serif font-bold text-neutral-300 hover:text-white transition-colors"
                     >
-                      <span className="text-xs md:text-sm font-mono text-purple-400/80 tracking-widest">
-                        0{idx + 1}
-                      </span>
                       <span className="group-hover:translate-x-3 transition-transform duration-300">
                         {link.label}
                       </span>

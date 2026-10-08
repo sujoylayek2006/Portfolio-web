@@ -16,4 +16,5 @@ export const socialLinks = {
   github: "https://github.com/sujoylayek2006",
   linkedin: "https://linkedin.com/in/sujoy-layek-6a206b338",
   email: "sujoylayek.rampur.2006@gmail.com",
+  resume: "/resume.pdf",
 };
