@@ -97,6 +97,11 @@
   - Grouped all 21 certificates into 5 interactive Organization Boxes: **HackerRank** (8 certs), **IBM SkillsBuild** (7 certs), **Oracle (OCI)** (2 certs), **Amazon Web Services** (2 certs), and **CISCO** (2 certs).
   - Clicking any organization box expands and reveals its verified credentials below with smooth Framer Motion layout animations.
   - Verified green lint and build (`npm run lint` exit code 0; `npm run build` exit code 0 in 1419ms).
+- **2026-10-08 (Session 2): Contact Form Message System Fix & Direct Gmail Fallback**
+  - Replaced dummy Web3Forms key with FormSubmit endpoint delivering directly to `sujoylayek.rampur.2006@gmail.com`.
+  - Added dual dispatch: 1-click "Send via Gmail Web" and "Open Mail App" compose links with pre-filled message, subject, and recipient.
+  - Tested endpoint and initiated 1-time activation email to Sujoy's Gmail.
+  - Verified green build (`npm run build` exit code 0 in 1525ms).
 
 ---
 
