@@ -75,17 +75,20 @@
   - Reverted [Hero.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/Hero.tsx) to the clean editorial layout: "Crafting scalable systems & pixel-perfect digital realities", B.Tech CSE tag, CTA buttons, and scroll cue. Completely removed 3D canvas animation from Hero.
   - Reverted [Contact.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/Contact.tsx) footer: removed the high-contrast white "Let's Work Together" section and restored the dark editorial footer.
   - Verified green lint and build (`npm run lint` exit code 0; `npm run build` exit code 0). Dev server running on `http://localhost:3000`.
-- **2026-10-08 (Session 2): Git Setup & GitHub Repository Integration (`B-020`)**
+- **2026-10-08 (Session 2): Git Setup & GitHub Repository Integration (`B-020` Complete ✅)**
   - Updated [.gitignore](file:///d:/Project%20Ideas/Portfolio%20web/.gitignore) to exclude reference media (`/Sc Pic/`, `/Sc video/`) and internal agent orchestration files (`PROJECT_INTERVIEW*`, `MASTER_RULES*`, `CLAUDE*`, `AGENTS*`, `.claude/`) keeping repository public view clean and professional.
   - Initialized git repository (`git init`). User provided repo: `https://github.com/sujoylayek2006/Portfolio-web.git`.
+  - Staged clean source files, created initial commit (`9af123c`), rebased seamlessly onto remote initial commit (`7e56e4c`), and pushed cleanly to `origin/main` (`940683d`).
+  - Verified production build and lint green (`npm run build` exit code 0; `npm run lint` exit code 0).
+  - Branch `main` is up-to-date with `origin/main`.
 
 ---
 
 ## 3. Next
 
-- **Task ID:** `B-020: Deployment Setup & Vercel Launch` 🔒
-  - **Outcome:** Commit project source files, link remote `origin`, push to `main` branch, and initiate Vercel deployment.
-  - **Approval Required:** 🔒 Human approval/signal to proceed with git commit and push.
+- **Task:** 1-Click Vercel Deployment
+  - **Outcome:** Import GitHub repo `sujoylayek2006/Portfolio-web` into Vercel dashboard to get live production URL (`https://*.vercel.app`).
+
 
 ---
 

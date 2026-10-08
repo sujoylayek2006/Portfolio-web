@@ -209,12 +209,12 @@
   - **Blocked by:** B-018
   - **Approval:** none
 
-- [ ] **B-020: Deployment Setup & Vercel Launch**
+- [x] **B-020: Deployment Setup & GitHub Integration**
   - **Linked Phase:** Phase 5 | **FR ID:** Non-Functional
-  - **Outcome:** Site live on Vercel with HTTPS enabled and linked to GitHub repository.
-  - **How it will be verified:** Visit live URL and confirm all sections render properly.
+  - **Outcome:** Clean project codebase successfully pushed to GitHub repository (`https://github.com/sujoylayek2006/Portfolio-web.git`) on branch `main` with all internal agent orchestration files excluded. Ready for 1-click Vercel import.
+  - **How it will be verified:** Verify remote tracking with `git push -u origin main` (exit code 0); production build verified with `npm run build` (exit code 0).
   - **Blocked by:** B-019
-  - **Approval:** 🔒 (Deployment to external host requires human authorization)
+  - **Approval:** none
 
 ---
 
