@@ -151,7 +151,7 @@ export default function Contact() {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 border-b border-white/10 pb-8">
         <div>
           <span className="text-xs font-mono uppercase tracking-widest text-purple-400">
-            Let&apos;s Connect (06)
+            Let&apos;s Connect
           </span>
           <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mt-2">
             Get in Touch.

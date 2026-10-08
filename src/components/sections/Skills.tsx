@@ -22,7 +22,7 @@ export default function Skills() {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 border-b border-white/10 pb-8">
         <div>
           <span className="text-xs font-mono uppercase tracking-widest text-purple-400">
-            Expertise &bull; Capabilities (04)
+            Expertise &bull; Capabilities
           </span>
           <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mt-2">
             Technical Stack.

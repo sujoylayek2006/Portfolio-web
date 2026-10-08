@@ -110,8 +110,7 @@ export default function ProjectShowcase() {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                <span className="relative z-10 flex items-center space-x-2">
-                  <span className="text-[10px] opacity-70">({proj.index})</span>
+                <span className="relative z-10 flex items-center">
                   <span>{proj.title}</span>
                 </span>
               </button>
@@ -128,9 +127,6 @@ export default function ProjectShowcase() {
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
-          <span className="text-xs font-mono text-neutral-400 px-2 select-none">
-            {activeProject.index} / 03
-          </span>
           <button
             onClick={() => paginate(1)}
             aria-label="Next project slide"
@@ -161,7 +157,6 @@ export default function ProjectShowcase() {
                 >
                   {activeProject.category}
                 </span>
-                <span>{activeProject.index} / 03</span>
               </div>
 
               <h3 className="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight">

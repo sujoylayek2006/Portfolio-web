@@ -113,6 +113,11 @@
 - **2026-10-08 (Session 2): Project Showcase Header Simplification**
   - Simplified the project showcase eyebrow banner from `Selected Works ({activeProject.index} • 03)` to clean `Selected Works` in [ProjectShowcase.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/ProjectShowcase.tsx) per user request.
   - Verified green lint and production build (`npm run lint` exit code 0; `npm run build` exit code 0 in 1176ms).
+- **2026-10-08 (Session 2): Number Counters & Index Labels Removal**
+  - Removed all `(01)`, `(02)`, `(03)` project index numbers from project tab selector pills in [ProjectShowcase.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/ProjectShowcase.tsx).
+  - Removed `{activeProject.index} / 03` counter from the carousel slide navigator and category badge.
+  - Cleaned section headers in [About.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/About.tsx), [Skills.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Skills.tsx), and [Contact.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Contact.tsx) to remove trailing section index numbers.
+  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1183ms).
 
 ---
 
