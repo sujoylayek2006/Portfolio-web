@@ -23,14 +23,14 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
+        {/* About Me Section with Portrait */}
+        <About />
+
         {/* Infinite Vision & Skills Marquee Ticker */}
         <MarqueeBanner />
 
         {/* Featured Project Showcase with 3D Laptop Stage */}
         <ProjectShowcase />
-
-        {/* About Me Section with Portrait */}
-        <About />
 
         {/* Technical Skills Matrix */}
         <Skills />

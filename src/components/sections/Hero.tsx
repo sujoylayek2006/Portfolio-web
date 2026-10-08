@@ -123,7 +123,7 @@ export default function Hero() {
         </div>
 
         <a
-          href="#projects"
+          href="#about"
           className="group flex items-center space-x-2 text-neutral-400 hover:text-white transition-colors shrink-0"
         >
           <span>Scroll down</span>

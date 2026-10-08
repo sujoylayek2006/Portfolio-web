@@ -15,7 +15,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 40);
 
       // Section spy detection
-      const sections = ["projects", "about", "skills", "certifications", "contact"];
+      const sections = ["about", "projects", "skills", "certifications", "contact"];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {

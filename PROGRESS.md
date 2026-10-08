@@ -147,9 +147,10 @@
 - **2026-10-08 (Session 2): Live Production Deployment on Vercel Confirmed**
   - Live Production URL: **`https://portfolio-web-sujoylayek.vercel.app`** (Verified HTTP 200).
   - OpenGraph Dynamic Social Card: **`https://portfolio-web-sujoylayek.vercel.app/opengraph-image`** (Verified HTTP 200).
-- **2026-10-08 (Session 2): Custom 'SL' Favicon & Dynamic App Icon**
-  - Replaced the default Next.js "N" icon with a custom branded **"SL"** (Sujoy Layek) icon across both [favicon.ico](file:///d:/Project%20Ideas/Portfolio%20web/src/app/favicon.ico) (multi-res 16/32/48/64px) and [icon.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/icon.tsx) (Next.js dynamic SVG/PNG).
-  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0). Verified HTTP 200 on `/icon` and `/favicon.ico`.
+- **2026-10-08 (Session 2): Section Flow Reordered (Hero -> About & Background -> Projects)**
+  - Repositioned **About & Background** immediately after the Hero section in [page.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/app/page.tsx).
+  - Updated Hero scroll cue to link to `#about` and synchronized navigation links in [navigation.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/navigation.ts) and [Navbar.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/ui/Navbar.tsx).
+  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 995ms).
 
 ---
 
