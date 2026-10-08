@@ -1,5 +1,18 @@
+export interface OrganizationData {
+  id: "oracle" | "aws" | "hackerrank" | "cisco" | "ibm";
+  name: string;
+  shortName: string;
+  tagline: string;
+  domains: string[];
+  color: string;
+  badgeBg: string;
+  accentBorder: string;
+  glowColor: string;
+}
+
 export interface CertificationData {
   id: string;
+  orgId: "oracle" | "aws" | "hackerrank" | "cisco" | "ibm";
   issuer: string;
   category: "cloud-ai" | "ibm" | "hackerrank" | "cyber";
   title: string;
@@ -10,66 +23,69 @@ export interface CertificationData {
   credentialUrl: string;
 }
 
-export const certificationCategories = [
-  { id: "all", label: "All Credentials", count: 21 },
-  { id: "cloud-ai", label: "Cloud & GenAI", count: 4 },
-  { id: "hackerrank", label: "HackerRank", count: 8 },
-  { id: "ibm", label: "IBM SkillsBuild", count: 6 },
-  { id: "cyber", label: "Cybersecurity", count: 3 },
-] as const;
+export const organizations: OrganizationData[] = [
+  {
+    id: "hackerrank",
+    name: "HackerRank",
+    shortName: "HackerRank",
+    tagline: "Software Engineering, Problem Solving & Algorithms",
+    domains: ["Software Engineer", "Problem Solving", "Python", "SQL"],
+    color: "text-emerald-400",
+    badgeBg: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+    accentBorder: "group-hover:border-emerald-500/40",
+    glowColor: "from-emerald-600/15 via-teal-600/10 to-transparent",
+  },
+  {
+    id: "ibm",
+    name: "IBM SkillsBuild & Design",
+    shortName: "IBM",
+    tagline: "Artificial Intelligence, Cloud, Data & Autonomous AI Agents",
+    domains: ["AI Fundamentals", "Cloud", "Cybersecurity", "Data", "AI Agents"],
+    color: "text-blue-400",
+    badgeBg: "bg-blue-500/10 text-blue-300 border-blue-500/20",
+    accentBorder: "group-hover:border-blue-500/40",
+    glowColor: "from-blue-600/15 via-indigo-600/10 to-transparent",
+  },
+  {
+    id: "oracle",
+    name: "Oracle Cloud Infrastructure",
+    shortName: "Oracle (OCI)",
+    tagline: "Enterprise Cloud Infrastructure & Generative AI",
+    domains: ["Generative AI Pro", "AI Foundations", "OCI Cloud"],
+    color: "text-red-400",
+    badgeBg: "bg-red-500/10 text-red-300 border-red-500/20",
+    accentBorder: "group-hover:border-red-500/40",
+    glowColor: "from-red-600/15 via-orange-600/10 to-transparent",
+  },
+  {
+    id: "aws",
+    name: "Amazon Web Services",
+    shortName: "AWS",
+    tagline: "Cloud Foundations & Generative AI Architecture",
+    domains: ["Cloud Practitioner", "Amazon Bedrock", "Foundations"],
+    color: "text-amber-400",
+    badgeBg: "bg-amber-500/10 text-amber-300 border-amber-500/20",
+    accentBorder: "group-hover:border-amber-500/40",
+    glowColor: "from-amber-600/15 via-orange-600/10 to-transparent",
+  },
+  {
+    id: "cisco",
+    name: "CISCO Networking Academy",
+    shortName: "CISCO",
+    tagline: "Cybersecurity, Network Defense & Threat Analysis",
+    domains: ["Cyber Defense", "Threat Analysis", "Network Security"],
+    color: "text-cyan-400",
+    badgeBg: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
+    accentBorder: "group-hover:border-cyan-500/40",
+    glowColor: "from-cyan-600/15 via-blue-600/10 to-transparent",
+  },
+];
 
 export const certifications: CertificationData[] = [
-  // 1. Oracle
-  {
-    id: "oracle-genai-pro",
-    issuer: "Oracle",
-    category: "cloud-ai",
-    badgeColor: "from-red-600/20 to-amber-600/10",
-    accentBorder: "group-hover:border-red-500/40",
-    title: "OCI 2025 Certified Generative AI Professional",
-    subtitle: "Large Language Models, OCI GenAI Service, RAG Architecture & Vector Search",
-    year: "Certified 2025",
-    credentialUrl: "/certificates/oracle-2025-generative-ai-professional.pdf",
-  },
-  {
-    id: "oracle-ai-foundations",
-    issuer: "Oracle",
-    category: "cloud-ai",
-    badgeColor: "from-red-600/20 to-amber-600/10",
-    accentBorder: "group-hover:border-red-500/40",
-    title: "OCI AI Foundations Associate",
-    subtitle: "Machine Learning, Deep Learning & Oracle Cloud Infrastructure AI Architecture",
-    year: "Certified 2025",
-    credentialUrl: "/certificates/oracle-ai-foundations-associate.pdf",
-  },
-
-  // 2. AWS
-  {
-    id: "aws-cloud-practitioner",
-    issuer: "Amazon Web Services",
-    category: "cloud-ai",
-    badgeColor: "from-amber-600/20 to-orange-600/10",
-    accentBorder: "group-hover:border-amber-500/40",
-    title: "AWS Cloud Practitioner Essentials",
-    subtitle: "Cloud Infrastructure, Global Architecture, Compute, Storage & Security",
-    year: "Completed",
-    credentialUrl: "/certificates/aws-cloud-practitioner-essentials.pdf",
-  },
-  {
-    id: "aws-generative-ai",
-    issuer: "Amazon Web Services",
-    category: "cloud-ai",
-    badgeColor: "from-amber-600/20 to-orange-600/10",
-    accentBorder: "group-hover:border-amber-500/40",
-    title: "Generative AI with AWS",
-    subtitle: "Foundation Models, Amazon Bedrock & Generative AI Deployment Principles",
-    year: "Completed 2025",
-    credentialUrl: "/certificates/aws-generative-ai.pdf",
-  },
-
-  // 3. HackerRank Certifications
+  // 1. HackerRank (8)
   {
     id: "hr-software-engineer",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
@@ -81,6 +97,7 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "hr-software-engineer-intern",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
@@ -92,17 +109,19 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "hr-problem-solving-intermediate",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
     accentBorder: "group-hover:border-emerald-500/40",
     title: "Problem Solving (Intermediate)",
-    subtitle: "Graph Traversal, Dynamic Programming, Bit Manipulation & Data Structures",
+    subtitle: "Graph Traversal, Dynamic Programming, Bit Manipulation & Advanced Data Structures",
     year: "Certified 2026",
     credentialUrl: "/certificates/hackerrank-problem-solving-intermediate.pdf",
   },
   {
     id: "hr-problem-solving-basic",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
@@ -114,6 +133,7 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "hr-python-basic",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-blue-600/20 to-cyan-600/10",
@@ -125,6 +145,7 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "hr-sql-advanced",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
@@ -136,6 +157,7 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "hr-sql-intermediate",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
@@ -147,6 +169,7 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "hr-sql-basic",
+    orgId: "hackerrank",
     issuer: "HackerRank",
     category: "hackerrank",
     badgeColor: "from-emerald-600/20 to-teal-600/10",
@@ -157,34 +180,11 @@ export const certifications: CertificationData[] = [
     credentialUrl: "/certificates/hackerrank-sql-basic.pdf",
   },
 
-  // 4. CISCO
-  {
-    id: "cisco-cybersecurity",
-    issuer: "CISCO",
-    category: "cyber",
-    badgeColor: "from-cyan-600/20 to-blue-600/10",
-    accentBorder: "group-hover:border-cyan-500/40",
-    title: "Introduction to Cybersecurity",
-    subtitle: "Threat Defense, Network Vulnerabilities, Cryptography & Security Architecture",
-    year: "Awarded May 2026",
-    credentialUrl: "/certificates/cisco-introduction-to-cybersecurity.pdf",
-  },
-  {
-    id: "cisco-cybersecurity-badge",
-    issuer: "CISCO",
-    category: "cyber",
-    badgeColor: "from-cyan-600/20 to-blue-600/10",
-    accentBorder: "group-hover:border-cyan-500/40",
-    title: "Introduction to Cybersecurity (Badge)",
-    subtitle: "Verified Competence in Cyber Defense & Network Security Practices",
-    year: "Certified 2026",
-    credentialUrl: "/certificates/cisco-cybersecurity-badge.pdf",
-  },
-
-  // 5. IBM SkillsBuild
+  // 2. IBM (7)
   {
     id: "ibm-ai-fundamentals",
-    issuer: "IBM",
+    orgId: "ibm",
+    issuer: "IBM SkillsBuild",
     category: "ibm",
     badgeColor: "from-blue-600/20 to-indigo-600/10",
     accentBorder: "group-hover:border-blue-500/40",
@@ -195,7 +195,8 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "ibm-cloud-fundamentals",
-    issuer: "IBM",
+    orgId: "ibm",
+    issuer: "IBM SkillsBuild",
     category: "ibm",
     badgeColor: "from-blue-600/20 to-indigo-600/10",
     accentBorder: "group-hover:border-blue-500/40",
@@ -206,7 +207,8 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "ibm-cybersecurity",
-    issuer: "IBM",
+    orgId: "ibm",
+    issuer: "IBM SkillsBuild",
     category: "cyber",
     badgeColor: "from-indigo-600/20 to-purple-600/10",
     accentBorder: "group-hover:border-indigo-500/40",
@@ -217,7 +219,8 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "ibm-data-fundamentals",
-    issuer: "IBM",
+    orgId: "ibm",
+    issuer: "IBM SkillsBuild",
     category: "ibm",
     badgeColor: "from-blue-600/20 to-indigo-600/10",
     accentBorder: "group-hover:border-blue-500/40",
@@ -228,6 +231,7 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "ibm-genai-action",
+    orgId: "ibm",
     issuer: "IBM Design",
     category: "ibm",
     badgeColor: "from-purple-600/20 to-pink-600/10",
@@ -239,7 +243,8 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "ibm-ai-advanced-algorithms",
-    issuer: "IBM",
+    orgId: "ibm",
+    issuer: "IBM SkillsBuild",
     category: "ibm",
     badgeColor: "from-purple-600/20 to-indigo-600/10",
     accentBorder: "group-hover:border-purple-500/40",
@@ -250,7 +255,8 @@ export const certifications: CertificationData[] = [
   },
   {
     id: "ibm-ai-agent-badge",
-    issuer: "IBM",
+    orgId: "ibm",
+    issuer: "IBM SkillsBuild",
     category: "ibm",
     badgeColor: "from-purple-600/20 to-pink-600/10",
     accentBorder: "group-hover:border-purple-500/40",
@@ -258,5 +264,83 @@ export const certifications: CertificationData[] = [
     subtitle: "Autonomous Agent Architectures, Tool Calling, Planning & Reasoning Loop Implementation",
     year: "Certified 2026",
     credentialUrl: "/certificates/ibm-build-ai-agent-badge.pdf",
+  },
+
+  // 3. Oracle (2)
+  {
+    id: "oracle-genai-pro",
+    orgId: "oracle",
+    issuer: "Oracle",
+    category: "cloud-ai",
+    badgeColor: "from-red-600/20 to-amber-600/10",
+    accentBorder: "group-hover:border-red-500/40",
+    title: "OCI 2025 Certified Generative AI Professional",
+    subtitle: "Large Language Models, OCI GenAI Service, RAG Architecture & Vector Search",
+    year: "Certified 2025",
+    credentialUrl: "/certificates/oracle-2025-generative-ai-professional.pdf",
+  },
+  {
+    id: "oracle-ai-foundations",
+    orgId: "oracle",
+    issuer: "Oracle",
+    category: "cloud-ai",
+    badgeColor: "from-red-600/20 to-amber-600/10",
+    accentBorder: "group-hover:border-red-500/40",
+    title: "OCI AI Foundations Associate",
+    subtitle: "Machine Learning, Deep Learning & Oracle Cloud Infrastructure AI Architecture",
+    year: "Certified 2025",
+    credentialUrl: "/certificates/oracle-ai-foundations-associate.pdf",
+  },
+
+  // 4. AWS (2)
+  {
+    id: "aws-cloud-practitioner",
+    orgId: "aws",
+    issuer: "Amazon Web Services",
+    category: "cloud-ai",
+    badgeColor: "from-amber-600/20 to-orange-600/10",
+    accentBorder: "group-hover:border-amber-500/40",
+    title: "AWS Cloud Practitioner Essentials",
+    subtitle: "Cloud Infrastructure, Global Architecture, Compute, Storage & Security",
+    year: "Completed",
+    credentialUrl: "/certificates/aws-cloud-practitioner-essentials.pdf",
+  },
+  {
+    id: "aws-generative-ai",
+    orgId: "aws",
+    issuer: "Amazon Web Services",
+    category: "cloud-ai",
+    badgeColor: "from-amber-600/20 to-orange-600/10",
+    accentBorder: "group-hover:border-amber-500/40",
+    title: "Generative AI with AWS",
+    subtitle: "Foundation Models, Amazon Bedrock & Generative AI Deployment Principles",
+    year: "Completed 2025",
+    credentialUrl: "/certificates/aws-generative-ai.pdf",
+  },
+
+  // 5. CISCO (2)
+  {
+    id: "cisco-cybersecurity",
+    orgId: "cisco",
+    issuer: "CISCO Networking Academy",
+    category: "cyber",
+    badgeColor: "from-cyan-600/20 to-blue-600/10",
+    accentBorder: "group-hover:border-cyan-500/40",
+    title: "Introduction to Cybersecurity",
+    subtitle: "Threat Defense, Network Vulnerabilities, Cryptography & Security Architecture",
+    year: "Awarded May 2026",
+    credentialUrl: "/certificates/cisco-introduction-to-cybersecurity.pdf",
+  },
+  {
+    id: "cisco-cybersecurity-badge",
+    orgId: "cisco",
+    issuer: "CISCO Networking Academy",
+    category: "cyber",
+    badgeColor: "from-cyan-600/20 to-blue-600/10",
+    accentBorder: "group-hover:border-cyan-500/40",
+    title: "Introduction to Cybersecurity (Badge)",
+    subtitle: "Verified Competence in Cyber Defense & Network Security Practices",
+    year: "Certified 2026",
+    credentialUrl: "/certificates/cisco-cybersecurity-badge.pdf",
   },
 ];
