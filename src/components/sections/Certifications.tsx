@@ -16,6 +16,13 @@ import {
   type OrganizationData,
 } from "@/data/certifications";
 
+const levelBadgeColors: Record<string, string> = {
+  Beginner: "text-blue-300 bg-blue-500/10 border-blue-500/20",
+  Intermediate: "text-amber-300 bg-amber-500/10 border-amber-500/20",
+  Advanced: "text-purple-300 bg-purple-500/10 border-purple-500/20",
+  Professional: "text-emerald-300 bg-emerald-500/10 border-emerald-500/20",
+};
+
 export default function Certifications() {
   // Always start with all certificates off (collapsed)
   const [selectedOrgId, setSelectedOrgId] = useState<string | null>(null);
@@ -203,9 +210,19 @@ export default function Certifications() {
                   {/* Top Details */}
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold tracking-wider uppercase bg-white/5 border border-white/10 text-neutral-200">
-                        {cert.issuer}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold tracking-wider uppercase bg-white/5 border border-white/10 text-neutral-200">
+                          {cert.issuer}
+                        </span>
+                        <span
+                          className={`px-2 py-0.5 rounded text-[10px] font-mono font-medium tracking-wider uppercase border ${
+                            levelBadgeColors[cert.level] ||
+                            "text-purple-300 bg-purple-500/10 border-purple-500/20"
+                          }`}
+                        >
+                          {cert.level}
+                        </span>
+                      </div>
 
                       <span className="inline-flex items-center space-x-1 text-[11px] font-mono text-emerald-400">
                         <ShieldCheck className="w-3.5 h-3.5" />

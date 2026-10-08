@@ -126,6 +126,10 @@
   - Updated Hero bottom ticker in [Hero.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Hero.tsx) to showcase: `Interests: Full-Stack Web Development • Cybersecurity • Ethical Hacking • AI`.
   - Optimized layout with responsive wrapping (`flex-col sm:flex-row`) to prevent overlap on mobile devices.
   - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1073ms).
+- **2026-10-08 (Session 2): Certifications Arranged in Order (Beginner to Pro)**
+  - Reordered all 21 certifications in [certifications.ts](file:///d:/Project%20Ideas/Portfolio%20web/src/data/certifications.ts) strictly from Beginner to Pro within each issuing organization (HackerRank, IBM, Oracle, AWS, CISCO).
+  - Added explicit `level` metadata (`Beginner`, `Intermediate`, `Advanced`, `Professional`) and styled color-coded pill tags on credential cards in [Certifications.tsx](file:///d:/Project%20Ideas/Portfolio%20web/src/components/sections/Certifications.tsx).
+  - Verified green lint (`npm run lint` exit code 0) and green production build (`npm run build` exit code 0 in 1256ms).
 
 ---
 
