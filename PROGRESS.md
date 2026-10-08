@@ -102,6 +102,9 @@
   - Added dual dispatch: 1-click "Send via Gmail Web" and "Open Mail App" compose links with pre-filled message, subject, and recipient.
   - Tested endpoint and initiated 1-time activation email to Sujoy's Gmail.
   - Verified green build (`npm run build` exit code 0 in 1525ms).
+- **2026-10-08 (Session 2): Next.js Development Indicator Badge Removal**
+  - Disabled the floating Next.js "N" development indicator via `devIndicators: false` in [next.config.ts](file:///d:/Project%20Ideas/Portfolio%20web/next.config.ts) per user request.
+  - Restarted background development server and verified green production build.
 
 ---
 
