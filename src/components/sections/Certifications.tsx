@@ -39,7 +39,7 @@ export default function Certifications() {
         <div>
           <span className="text-xs font-mono uppercase tracking-[0.25em] text-purple-400 flex items-center gap-2">
             <Award className="w-3.5 h-3.5 text-purple-400" />
-            Verified Accreditations &bull; 5 Organizations &bull; 21 Certifications
+            Verified Accreditations
           </span>
           <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mt-2">
             Certifications &amp; Credentials.
@@ -167,7 +167,7 @@ export default function Certifications() {
                     </span>
                   </div>
                   <p className="text-neutral-400 text-xs sm:text-sm mt-0.5">
-                    Showing all {activeCertificates.length} verified credentials issued to Sujoy Layek
+                    Showing verified credentials issued to Sujoy Layek
                   </p>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function Certifications() {
               <div className="flex items-center gap-2.5 self-start sm:self-auto">
                 <div className="text-xs font-mono text-neutral-300 flex items-center gap-2 bg-neutral-900/80 px-3.5 py-1.5 rounded-full border border-white/10">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>{activeCertificates.length} Verified</span>
+                  <span>Verified Credentials</span>
                 </div>
                 <button
                   type="button"
